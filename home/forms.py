@@ -28,17 +28,6 @@ class SignupForm(UserCreationForm):
 		)
 	)
 
-	# company = forms.CharField(
-	# 	# required=False,
-	# 	widget=forms.TextInput(
-	# 		attrs={
-	# 			'required': 'False',
-	# 			'class': 'form-control',
-	# 			'placeholder': '회사명을 입력해주세요. (선택사항)',
-	# 		}
-	# 	)
-	# )
-
 	password1 = forms.CharField(
 		required=True,
 		widget=forms.PasswordInput(
@@ -69,6 +58,12 @@ class SignupForm(UserCreationForm):
 		model = myUser
 		fields = ('email', 'phone', 'password1', 'password2')
 
+	def clean_email(self):
+		email = self.cleaned_data['email']
+		if myUser.objects.filter(email=email).exists():
+			raise forms.ValidationError("존재하는 이메일 입니다.")
+		return email
+
 	def clean_password2(self):
 		password1 = self.cleaned_data.get("password1")
 		password2 = self.cleaned_data.get("password2")
@@ -79,14 +74,13 @@ class SignupForm(UserCreationForm):
 			)
 		return password2
 
-	def clean_email(self):
-		email = self.cleaned_data['email']
-		if myUser.objects.filter(email=email).exists():
-			raise forms.ValidationError("존재하는 이메일 입니다.")
-		return email
-
-
-
+	def save(self, commit=True):
+		# Save the provided password in hashed format
+		user = super(UserCreationForm, self).save(commit=False)
+		user.set_password(self.cleaned_data["password1"])
+		if commit:
+			user.save()
+		return user
 
 
 class LoginForm(AuthenticationForm):

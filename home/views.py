@@ -7,6 +7,7 @@ from .models import myUser
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import password_validation
 from django.db import transaction
 
 
@@ -20,9 +21,13 @@ def signup(request):
 		# profileform = ProfileForm(request.POST)
 		if signupform.is_valid():
 		# if signupform.is_valid() and profileform.is_valid():
-			user = signupform.save()
+			user = signupform.save(commit=False)
+			# password_v = password_validation.validate_password(user.password)
+			# if password_v is not None:
+			# 	return HttpResponseRedirect(reverse("/"))
 			# user = profileform.save()
 			# user.email = signupform.cleaned_data['email']
+			# user.set_password(user.password)
 			user.save()
 
 			return HttpResponseRedirect(reverse("signup_ok"))
@@ -36,37 +41,37 @@ def signup_ok(request):
 	return render(request, 'home/signup_ok.html', {})
 
 
-def loginview(request):
-	email = password = ''
-	if request.method == "POST":
-		# global loginform
-		# global email
-		# email = request.POST['email']
-		# password = request.POST['password']
-		email = request.POST.get('email', False)
-		password = request.POST.get('password', False)
+# def loginview(request):
+# 	email = password = ''
+# 	if request.method == "POST":
+# 		# global loginform
+# 		# global email
+# 		# email = request.POST['email']
+# 		# password = request.POST['password']
+# 		email = request.POST.get('email', False)
+# 		password = request.POST.get('password', False)
 
-		user = authenticate(email=email, password=password)
+# 		user = authenticate(email=email, password=password)
 
-		if user is not None:
-			if user.is_active:
-				login(request, user)
-				return HttpResponseRedirect(reverse("index"))
-		# else:
-		# 	clean(self)
-			# loginform = LoginForm()
-			# return HttpResponseRedirect(reverse("index"))
-			# raise request.ValidationError('nono')
+# 		if user is not None:
+# 			if user.is_active:
+# 				login(request, user)
+# 				return HttpResponseRedirect(reverse("index"))
+# 		# else:
+# 		# 	clean(self)
+# 			# loginform = LoginForm()
+# 			# return HttpResponseRedirect(reverse("index"))
+# 			# raise request.ValidationError('nono')
 
-	else:
-		loginform = LoginForm()
-	# global loginform
-	return render(request, 'home/login.html', {'loginform': loginform})
-	# return render_to_response('home/login.html', context=RequestContext(request))
+# 	else:
+# 		loginform = LoginForm()
+# 	# global loginform
+# 	return render(request, 'home/login.html', {'loginform': loginform})
+# 	# return render_to_response('home/login.html', context=RequestContext(request))
 
-def logoutview(request):
-	logout(request)
-	return render(request, 'home/index.html', {})
+# def logoutview(request):
+# 	logout(request)
+# 	return render(request, 'home/index.html', {})
 
 def invitation(request):
 	return render(request, 'home/invitation.html', {})
