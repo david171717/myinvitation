@@ -90,7 +90,7 @@ class SignupForm(UserCreationForm):
 
 
 class LoginForm(AuthenticationForm):
-	email = forms.EmailField(
+	username = forms.EmailField(
 		required=True,
 		widget=forms.TextInput(
 			attrs={
