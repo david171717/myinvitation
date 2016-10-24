@@ -33,7 +33,7 @@ class SignupForm(UserCreationForm):
 		widget=forms.PasswordInput(
 			attrs={
 				'class': 'form-control',
-				'placeholder': '패스워드를 입력해주세요.',
+				'placeholder': '패스워드를 입력해주세요. (8자 이상)',
 				'required': 'True',
 			}
 		)
@@ -54,6 +54,8 @@ class SignupForm(UserCreationForm):
 		'password_mismatch':("패스워드가 일치하지 않습니다."),
 	}
 
+	MIN_LENGTH = 8
+
 	class Meta:
 		model = myUser
 		fields = ('email', 'phone', 'password1', 'password2')
@@ -67,6 +69,12 @@ class SignupForm(UserCreationForm):
 	def clean_password2(self):
 		password1 = self.cleaned_data.get("password1")
 		password2 = self.cleaned_data.get("password2")
+
+		# 패스워드 길이 최소 8자 이상 검증
+		if len(password1) < self.MIN_LENGTH:
+			raise forms.ValidationError("8자 이상 입력하세요")
+		
+		# 패스워드 입력 및 재입력
 		if password1 and password2 and password1 != password2:
 			raise forms.ValidationError(
 				self.error_messages['password_mismatch'],
