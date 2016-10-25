@@ -82,6 +82,12 @@
 
                     </li>
                     <li>
+                        <a class="=page-scroll" href="{% url 'introduction' %}">서비스 소개</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'application' %}">서비스 신청</a>
+                    </li>
+                    <li>
                         {% if request.user.is_authenticated %}
                         <a class="page-scroll" href="{% url 'invitation' %}">청첩장</a>
                         {% else %}

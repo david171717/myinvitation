@@ -72,6 +72,11 @@ def signup_ok(request):
 # def logoutview(request):
 # 	logout(request)
 # 	return render(request, 'home/index.html', {})
+def introduction(request):
+	return render(request, 'home/introduction.html', {})
+
+def application(request):
+	return render(request, 'home/application.html', {})	
 
 def invitation(request):
 	return render(request, 'home/invitation.html', {})
