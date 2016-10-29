@@ -11,9 +11,14 @@
                 <hr>
                 <p>이 페이지는 서비스 소개 페이지로 사용될 예정</p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#intro01">
-  청첩장 미리보기
-</button>
+                <br><br><br>
+
+                <p>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#intro01">스킨 1 미리보기</button>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#intro02">스킨 2 미리보기</button>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#intro03">스킨 3 미리보기</button>
+                </p>
+                
             </div>
         </div>
     </header>
@@ -34,6 +39,24 @@
 
 <!-- Modal -->
 <div class="modal fade bs-example-modal-sm" id="intro01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="form-group">
+            <img src="{% static 'img/introduction/intro00.jpg' %}" class="img-responsive" alt="">
+        </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="intro02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="form-group">
+            <img src="{% static 'img/introduction/intro06.jpg' %}" class="img-responsive" alt="">
+        </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="intro03" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
         <div class="form-group">
