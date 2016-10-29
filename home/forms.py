@@ -54,7 +54,7 @@ class SignupForm(UserCreationForm):
 		'password_mismatch':("패스워드가 일치하지 않습니다."),
 	}
 
-	MIN_LENGTH = 8
+	MIN_LENGTH = 6
 
 	class Meta:
 		model = myUser
@@ -72,7 +72,7 @@ class SignupForm(UserCreationForm):
 
 		# 패스워드 길이 최소 8자 이상 검증
 		if len(password1) < self.MIN_LENGTH:
-			raise forms.ValidationError("8자 이상 입력하세요")
+			raise forms.ValidationError("패스워드를 6자 이상 입력하세요")
 		
 		# 패스워드 입력 및 재입력
 		if password1 and password2 and password1 != password2:
