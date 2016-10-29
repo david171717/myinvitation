@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'myinvitation',
         'ENGINE': 'mysql.connector.django',
         'USER': 'root',
-        'PASSWORD': 'admin4W#C',
+        'PASSWORD': 'master12#',
         'OPTIONS': {
           'autocommit': True,
         },
