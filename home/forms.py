@@ -33,7 +33,7 @@ class SignupForm(UserCreationForm):
 		widget=forms.PasswordInput(
 			attrs={
 				'class': 'form-control',
-				'placeholder': '패스워드를 입력해주세요. (8자 이상)',
+				'placeholder': '패스워드를 입력해주세요. (6자 이상)',
 				'required': 'True',
 			}
 		)
