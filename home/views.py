@@ -81,6 +81,23 @@ def application(request):
 def invitation(request):
 	return render(request, 'home/invitation.html', {})
 
+def wedding(request):
+	return render(request, 'home/wedding/wedding.html', {})
+
+def w_1(request):
+	return render(request, 'home/wedding/w_1.html', {})
+def w_2(request):
+	return render(request, 'home/wedding/w_2.html', {})
+def w_3(request):
+	return render(request, 'home/wedding/w_3.html', {})
+def w_4(request):
+	return render(request, 'home/wedding/w_4.html', {})
+def w_5(request):
+	return render(request, 'home/wedding/w_5.html', {})
+def w_6(request):
+	return render(request, 'home/wedding/w_6.html', {})
+
+
 # @login_required
 # @transaction.atomic
 # def update_profile(request):
