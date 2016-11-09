@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=0.65, maximum-scale=10.0, minimum-scale=0, user-scalable=yes, target-densitydpi=medium-dpi" />
 <title>w1</title>
 <link rel="stylesheet" href="{% static 'css/wedding-style.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
 <style type="text/css">
 body {
 	margin-left: 0px;
@@ -17,16 +19,65 @@ body {
 </style>
 </head>
 <body>
-<div style=" position:relative; z-index:14; width:580px; height:49px; margin:0 auto; top:430px; margin-top:-48px; left:8px; ">
+
+
+<!-- <div style=" position:relative; z-index:14; width:580px; height:49px; margin:0 auto; top:430px; margin-top:-48px; left:8px; ">
 	<div style="float:left;"><img src="{% static 'img/wedding-images/w_3/left.png' %}" border="0" /></div>
     <div style="float:left; margin-left:458px;"><img src="{% static 'img/wedding-images/w_3/right.png' %}" border="0" /></div>
-</div>
+</div> -->
 
 <!--  w_3 -->
 <div id="wrap_3">
 <div id="w_3">
 	<div id="top3"><img src="{% static 'img/wedding-images/w_3/img_1.jpg' %}" /></div>
-	<div id="photo"><img src="{% static 'img/wedding-images/w_3/img_2.jpg' %}" /></div>
+	
+
+    <!-- <div id="photo">
+        <img src="{% static 'img/wedding-images/w_3/img_2.jpg' %}" />
+    </div> -->
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div id="photo" class="item active">
+          <img src="{% static 'img/wedding-images/w_3/img_2.jpg' %}" alt="...">
+        </div>
+        <div id="photo" class="item">
+          <img src="{% static 'img/wedding-images/w_3/out_2.jpg' %}" alt="...">
+        </div>
+        <div id="photo" class="item">
+          <img src="{% static 'img/wedding-images/w_3/out_3.jpg' %}" alt="...">
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="carousel-control left" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control right" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+
+
     <div id="thum">
     	<div style="float:left; width:130px;"><img src="{% static 'img/wedding-images/w_3/out_1.jpg' %}" /></div>
         <div style="float:left; width:130px; margin-left:19px;"><img src="{% static 'img/wedding-images/w_3/out_2.jpg' %}" /></div>
@@ -49,12 +100,10 @@ body {
 </div>
 </div>   
 
-   
-   
-   
 
 
 
 
 </body>
 </html>
+
