@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=0.65, maximum-scale=10.0, minimum-scale=0, user-scalable=yes, target-densitydpi=medium-dpi" />
 <title>w1</title>
 <link rel="stylesheet" href="{% static 'css/wedding-style.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 <style type="text/css">
 body {
 	margin-left: 0px;
@@ -27,7 +28,11 @@ body {
         <div style=" margin-left:271px; float:left;"><img src="{% static 'img/wedding-images/w_1/img_2.png' %}" /></div>
         <div style=" margin-left:16px; float:left;"><img src="{% static 'img/wedding-images/w_1/img_3.png' %}" /></div>
    </div>
-   <div id="day"><img src="{% static 'img/wedding-images/w_1/img_4.png' %}" /></div> 
+  <div id="day">
+    <img src="{% static 'img/wedding-images/w_1/img_4.png' %}"  style="position: absolute;"/>
+    <center><div id="dateView" style="position: relative; padding-top: 55px;"></div></center>
+
+  </div> 
    <div id="time"><img src="{% static 'img/wedding-images/w_1/img_5.png' %}" /></div>  
    <div id="weather"><img src="{% static 'img/wedding-images/w_1/img_6.png' %}" /></div>  
    <div id="btn">
@@ -40,7 +45,48 @@ body {
 </div>
 </div>  
 
-   
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script>
+    $(document).ready( function() {
+     
+        setViewTime = function (){ //함수로 만들어 준다.
+         
+            //아래 부분 입력창에서 가져오지 않고 그냥 셋팅해도 된다.
+            var getYear = 2016;
+            var getMonth = 12;
+            var getDay = 3;
+            var dat1 = new Date(); //현재날짜
+            var dat2 = new Date(getYear, getMonth-1, getDay); //월에서 1 빼줘야 함
+         
+            var diff = dat2 - dat1; //날짜 빼기
+             
+            var currSec = 1000; // 밀리세컨
+            var currMin = 60 * 1000; // 초 * 밀리세컨
+            var currHour = 60 * 60 * 1000; // 분 * 초 * 밀리세컨
+            var currDay = 24 * 60 * 60 * 1000; // 시 * 분 * 초 * 밀리세컨
+             
+            var day = parseInt(diff/currDay); //d-day 일
+            var hour = parseInt(diff/currHour); //d-day 시
+            var min = parseInt(diff/currMin); //d-day 분
+            var sec = parseInt(diff/currSec); //d-day 초
+             
+            var viewHour = hour-(day*24);
+            var viewMin = min-(hour*60);
+            var viewSec = sec-(min*60);
+             
+            //시분초 말고 일까지만 보여주면 day만 노출하면 된다.
+            // var viewStr = day+"일 "+viewHour+"시 "+viewMin+"분 "+viewSec+"초";
+            var viewStr = day+1;
+             
+            $("#dateView").html("<span style='font-size: 40pt; color:white;'><b>"+viewStr+"</b></span>");
+        }
+         
+        setInterval('setViewTime()',1000);
+         
+    });
+       
+  </script>
    
    
    
