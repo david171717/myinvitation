@@ -69,9 +69,9 @@ textarea.tx { border:1px solid #9A9A9A; border-right:1px solid #D8D8D8; border-b
 
 
 /* w_4 */
-#wrap_4{ width:100%; min-width:640px; height:300px; position:absolute;}
+#wrap_4{ width:100%; min-width:640px; height:500px; position:absolute;}
 #w_4{ width:640px; height:1363x; margin:0 auto;}
-#pic4{ width:600px; height:252px; margin-left:20px; margin-top:40px;}
+#pic4{ width:600px; height:400px; margin-left:20px; margin-top:40px;}
 #top4{ width:580px; height:71px; margin-left:20px; margin-top:40px;}
 #title{ width:600px; height:26px; margin-left:20px; margin-top:58px; }
 #line{ width:600px; height:1px; margin-top:32px; margin-left:20px;}
