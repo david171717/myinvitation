@@ -5,6 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=0.65, maximum-scale=10.0, minimum-scale=0, user-scalable=yes, target-densitydpi=medium-dpi" />
+<!-- <meta property="fb:app_id" content="APP_ID" /> -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="test" />
+<meta property="og:url" content="http://52.78.189.154/psjwedding/" />
+<meta property="og:description" content="웹 페이지 내용" />
+<meta property="og:image" content="웹 페이지 대표 이미지" />
+
 <title>w1</title>
 <link rel="stylesheet" href="{% static 'css/wedding-style.css' %}">
 <style type="text/css">
@@ -24,7 +31,7 @@ body {
 <div id="w_6">
 	<div id="top6"><img src="{% static 'img/wedding-images/w_6/img_1.jpg' %}" /></div>
 	<div id="sns">
-    	<div style="float:left;"><img src="{% static 'img/wedding-images/w_6/sns_1.jpg' %}" /></div>
+    	<div style="float:left;"><img onclick="facebook_share()" style="cursor: pointer;" src="{% static 'img/wedding-images/w_6/sns_1.jpg' %}" /></div>
         <div style="float:left;"><img src="{% static 'img/wedding-images/w_6/sns_2.jpg' %}" /></div>
         <div style="float:left;"><img src="{% static 'img/wedding-images/w_6/sns_3.jpg' %}" /></div>
         <div style="float:left;"><img src="{% static 'img/wedding-images/w_6/sns_4.jpg' %}" /></div>
@@ -36,7 +43,11 @@ body {
 </div> 
 
 
-   
+<script>
+function facebook_share(){
+    window.open('http://www.facebook.com/sharer/sharer.php?u=http://52.78.189.154/psjwedding/');
+}
+</script>
    
    
 
