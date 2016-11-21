@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=0.65, maximum-scale=10.0, minimum-scale=0, user-scalable=yes, target-densitydpi=medium-dpi" />
 <title>w1</title>
-<!-- <link rel="stylesheet" href="/w1/style.css" type="text/css"> -->
 <link rel="stylesheet" href="{% static 'css/wedding-style.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 <style type="text/css">
 body {
 	margin-left: 0px;
@@ -20,14 +20,12 @@ body {
 <body>
 
 
-<div style="position:absolute; width:100%; min-width:640px;">
-<div style=" width:640px; margin:0 auto;">
-<iframe src="{% url 'w_1' %}" width="640" height="1136" scrolling="no" frameborder="0"></iframe>
-<iframe src="{% url 'w_2' %}" width="640" height="1136" scrolling="no" frameborder="0"></iframe>
-<iframe src="{% url 'w_3' %}" width="640" height="1136" scrolling="no" frameborder="0"></iframe>
-<iframe src="{% url 'w_4' %}" width="640" height="480" scrolling="no" frameborder="0"></iframe>
-<iframe src="{% url 'w_5' %}" width="640" height="1136" scrolling="no" frameborder="0"></iframe>
-<iframe style="margin-top: 50px" src="{% url 'w_6' %}" width="640" height="1137" scrolling="no" frameborder="0"></iframe>
+<iframe src="{% url 'w_1' %}" width="100%" height="1070" scrolling="no" frameborder="0"></iframe>
+<iframe src="{% url 'w_2' %}" width="100%" height="1136" scrolling="no" frameborder="0"></iframe>
+<iframe src="{% url 'w_3' %}" width="100%" height="1150" scrolling="no" frameborder="0"></iframe>
+<!-- <iframe src="{% url 'w_4' %}" width="100%" height="1063" scrolling="no" frameborder="0"></iframe> -->
+<iframe src="{% url 'w_5' %}" style="margin-top: -100px;" width="100%" height="1250" scrolling="no" frameborder="0"></iframe>
+<iframe src="{% url 'w_6' %}" width="100%" height="1140" scrolling="no" frameborder="0"></iframe>
 
 
 

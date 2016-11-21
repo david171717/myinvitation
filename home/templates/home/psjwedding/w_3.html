@@ -8,7 +8,6 @@
 <title>w1</title>
 <link rel="stylesheet" href="{% static 'css/wedding-style.css' %}">
 <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-
 <style type="text/css">
 body {
 	margin-left: 0px;
@@ -16,33 +15,36 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
+.wrap_3{ width:100%; min-height:100%; position:relative;}
+.wrap_3 .bg {
+}
+.wrap_3 .bg img{width:100%;} 
+.photo{ width:580px; height:466px; }
+.photo img{ width:100%;}
+.thum{  margin-top:37px; height:130px;}
+.thum img {	width:100%;}
 </style>
 </head>
 <body>
 
 
-<!-- <div style=" position:relative; z-index:14; width:580px; height:49px; margin:0 auto; top:430px; margin-top:-48px; left:8px; ">
-	<div style="float:left;"><img src="{% static 'img/wedding-images/w_3/left.png' %}" border="0" /></div>
-    <div style="float:left; margin-left:458px;"><img src="{% static 'img/wedding-images/w_3/right.png' %}" border="0" /></div>
-</div> -->
 
-<!--  w_3 -->
-<div id="wrap_3">
-<div id="w_3">
-	<div id="top3"><img src="{% static 'img/wedding-images/w_3/img_1.jpg' %}" /></div>
-	
-
-    <!-- <div id="photo">
-        <img src="{% static 'img/wedding-images/w_3/img_2.jpg' %}" />
-    </div> -->
-
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div style=" position:relative; z-index:200; width:580px; height:50px; margin:0 auto; top:110px; padding-top:-100px;  ">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
         <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="9"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="10"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="11"></li>
       </ol>
 
       <!-- Wrapper for slides -->
@@ -59,6 +61,30 @@ body {
         <div label=3 id="photo" class="item">
           <img src="{% static 'img/wedding-images/w_3/out_4.jpg' %}">
         </div>
+        <div label=4 id="photo" class="item">
+          <img src="{% static 'img/wedding-images/w_3/img_2.jpg' %}">
+        </div>
+        <div label=5 id="photo" class="item">
+          <img src="{% static 'img/wedding-images/w_3/out_2.jpg' %}">
+        </div>
+        <div label=6 id="photo" class="item">
+          <img src="{% static 'img/wedding-images/w_3/out_3.jpg' %}">
+        </div>
+        <div label=7 id="photo" class="item">
+          <img src="{% static 'img/wedding-images/w_3/out_4.jpg' %}">
+        </div>
+        <div label=8 id="photo" class="item">
+          <img src="{% static 'img/wedding-images/w_3/img_2.jpg' %}">
+        </div>
+        <div label=9 id="photo" class="item">
+          <img src="{% static 'img/wedding-images/w_3/out_2.jpg' %}">
+        </div>
+        <div label=10 id="photo" class="item">
+          <img src="{% static 'img/wedding-images/w_3/out_3.jpg' %}">
+        </div>
+        <div label=11 id="photo" class="item">
+          <img src="{% static 'img/wedding-images/w_3/out_4.jpg' %}">
+        </div>
       </div>
 
       <!-- Controls -->
@@ -70,35 +96,60 @@ body {
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>
+</div>
+<!--     <div style="margin-top: -20px">
 
-    <div id="thum">
-    	<div id="mouseover" style="float:left; width:130px;"><img label=0 src="{% static 'img/wedding-images/w_3/out_1.jpg' %}" /></div>
-        <div id="mouseover" style="float:left; width:130px; margin-left:19px;"><img label=1 src="{% static 'img/wedding-images/w_3/out_2.jpg' %}" /></div>
-        <div id="mouseover" style="float:left; width:130px; margin-left:19px;"><img label=2 src="{% static 'img/wedding-images/w_3/out_3.jpg' %}" /></div>
-        <div id="mouseover" style="float:left; width:130px; margin-left:18px;"><img label=3 src="{% static 'img/wedding-images/w_3/out_4.jpg' %}" /></div>
+        <img id="thum_img" class="center-block" style=" float:left;" src="{% static 'img/wedding-images/w_3/out_1.jpg' %}" />
+
+        <img id="thum_img" class="img-responsive center-block" style=" float:left; margin-left: 20px;" src="{% static 'img/wedding-images/w_3/out_1.jpg' %}" />
+
+        <img id="thum_img" class="img-responsive center-block" style=" float:left; margin-left: 20px;" src="{% static 'img/wedding-images/w_3/out_1.jpg' %}" />
+
+        <img id="thum_img" class="img-responsive center-block" style=" float:left; margin-left: 20px;" src="{% static 'img/wedding-images/w_3/out_1.jpg' %}" />
     </div>
-    <div id="thum">
-    	<div style="float:left; width:130px;"><img src="{% static 'img/wedding-images/w_3/out_5.jpg' %}" /></div>
-        <div style="float:left; width:130px; margin-left:19px;"><img src="{% static 'img/wedding-images/w_3/out_6.jpg' %}" /></div>
-        <div style="float:left; width:130px; margin-left:19px;"><img src="{% static 'img/wedding-images/w_3/out_7.jpg' %}" /></div>
-        <div style="float:left; width:130px; margin-left:18px;"><img src="{% static 'img/wedding-images/w_3/out_8.jpg' %}" /></div>
+ -->   
+    <div id="thum_div" style="margin-top:20px;">
+      <center>
+          <img id="thum_img" label="0" src="{% static 'img/wedding-images/w_3/out_1.jpg' %}" />&nbsp;
+          <img id="thum_img" label="1" src="{% static 'img/wedding-images/w_3/out_2.jpg' %}" />&nbsp;
+          <img id="thum_img" label="2" src="{% static 'img/wedding-images/w_3/out_3.jpg' %}" />&nbsp;
+          <img id="thum_img" label="3" src="{% static 'img/wedding-images/w_3/out_4.jpg' %}" />
+      </center>
     </div>
-    <div id="thum">
-    	<div style="float:left; width:130px;"><img src="{% static 'img/wedding-images/w_3/out_9.jpg' %}" /></div>
-        <div style="float:left; width:130px; margin-left:19px;"><img src="{% static 'img/wedding-images/w_3/out_10.jpg' %}" /></div>
-        <div style="float:left; width:130px; margin-left:19px;"><img src="{% static 'img/wedding-images/w_3/out_11.jpg' %}" /></div>
-        <div style="float:left; width:130px; margin-left:18px;"><img src="{% static 'img/wedding-images/w_3/out_12.jpg' %}" /></div>
+    <div id="thum_div" style="margin-top:20px;">
+      <center>
+          <img id="thum_img" label="4" src="{% static 'img/wedding-images/w_3/out_1.jpg' %}" />&nbsp;
+          <img id="thum_img" label="5" src="{% static 'img/wedding-images/w_3/out_2.jpg' %}" />&nbsp;
+          <img id="thum_img" label="6" src="{% static 'img/wedding-images/w_3/out_3.jpg' %}" />&nbsp;
+          <img id="thum_img" label="7" src="{% static 'img/wedding-images/w_3/out_4.jpg' %}" />
+      </center>
+    </div>
+    <div id="thum_div" style="margin-top:20px;">
+      <center>
+          <img id="thum_img" label="8" src="{% static 'img/wedding-images/w_3/out_1.jpg' %}" />&nbsp;
+          <img id="thum_img" label="9" src="{% static 'img/wedding-images/w_3/out_2.jpg' %}" />&nbsp;
+          <img id="thum_img" label="10" src="{% static 'img/wedding-images/w_3/out_3.jpg' %}" />&nbsp;
+          <img id="thum_img" label="11" src="{% static 'img/wedding-images/w_3/out_4.jpg' %}" />
+      </center>
     </div>
     
 </div>
+   
+
+
+<!--  w_3 -->
+<div class="wrap_3">
+    <div class="bg">
+      <img style="height: 1050px;" src="{% static 'img/wedding-images/w_3/bg.jpg' %}">
+    </div>
+    <div style="clear:both"></div>
 </div>   
 
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script>
 $(document).ready(function(){        
-        $("#thum div img").click(function(){    // button 요소를 누르면 다음 내용을 실행한다.
+        $("#thum_div #thum_img").click(function(){    // button 요소를 누르면 다음 내용을 실행한다.
             var num = $(this).attr("label");
             $('.carousel').carousel(parseInt(num));
             // $(".carousel-indicators li[data-slide-to=1]").removeClass("active");
@@ -118,11 +169,11 @@ $(document).ready(function(){
             });
  });
 </script>            
+   
+   
+
 
 
 
 </body>
 </html>
-
-
-

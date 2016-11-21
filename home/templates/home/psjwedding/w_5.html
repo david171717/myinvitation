@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=0.65, maximum-scale=10.0, minimum-scale=0, user-scalable=yes, target-densitydpi=medium-dpi" />
 <title>w1</title>
 <link rel="stylesheet" href="{% static 'css/wedding-style.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 <style type="text/css">
 body {
 	margin-left: 0px;
@@ -14,24 +15,35 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
+.wrap_5{ width:100%; min-height:100%; position:relative;}
+.wrap_5 .bg {
+}
+.wrap_5 .bg img{width:100%;} 
+.address{ margin-top:20px; height:100px;}
 </style>
 </head>
 <body>
 
+<div style=" position:relative; z-index:13; width:580px; height:52px; margin:0 auto; top:210px; margin-top:-48px;  ">
+<img src="{% static 'img/wedding-images/w_5/img_1.jpg' %}" />
+<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.086294591617!2d126.6885325156048!3d37.435066139403425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b798165bffb43%3A0x194fe19836e1f7ad!2z7J247LKc66y47ZWZ6rK96riw7J6l!5e0!3m2!1sko!2skr!4v1478413315695" width="580" height="430" frameborder="0" allowfullscreen></iframe></div>
+</div>
 
+<div style=" position:relative; z-index:15; width:580px; height:200px; margin:0 auto; top:810px; margin-top:-118px;  ">
+	<center>
+        <div style="width:423px; padding-top:70px; height:78px;"><img src="{% static 'img/wedding-images/w_5/img_3.jpg' %}" /></div>   
+    </center>
+    <center>
+        <div style="height:500px; padding-top:110px;"><img src="{% static 'img/wedding-images/w_5/img_4.jpg' %}" /></div>
+    </center>
+</div>
 <!--  w_5 -->
-<div id="wrap_5">
-<div id="w_5">
-	<div id="top5"><img src="{% static 'img/wedding-images/w_5/img_1.jpg' %}" /></div>
-    <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.086294591617!2d126.6885325156048!3d37.435066139403425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b798165bffb43%3A0x194fe19836e1f7ad!2z7J247LKc66y47ZWZ6rK96riw7J6l!5e0!3m2!1sko!2skr!4v1478413315695" width="580" height="430" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-    <div id="address">
-    	<div style="float:left; width:423px; height:78px;"><img src="{% static 'img/wedding-images/w_5/img_3.jpg' %}" /></div>
-        <div style="float:left; width:67px; height:67px;"><img src="{% static 'img/wedding-images/w_5/btn_navi.jpg' %}" /></div>
-        <div style="float:left; width:67px; height:67px; margin-left:21px;"><img src="{% static 'img/wedding-images/w_5/btn_map.jpg' %}" /></div>
-    </div>
-	<div id="bus"><img src="{% static 'img/wedding-images/w_5/img_4.jpg' %}" /></div>
-
-
+<div class="wrap_5">
+<div class="w_5">
+	<div class="bg" style="height: 1250px;">
+		<img style="height: 1150px;" src="{% static 'img/wedding-images/w_5/bg.jpg' %}">
+	</div>
+    <div style="clear:both"></div>
 </div>
 </div> 
 
@@ -45,3 +57,4 @@ body {
 
 </body>
 </html>
+

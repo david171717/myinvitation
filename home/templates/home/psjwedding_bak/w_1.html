@@ -15,60 +15,34 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
-.wrap_1{ width:100%; min-height:100%; position:relative;}
-.wrap_1 .bg {
-}
-.wrap_1 .bg img{width:100%;}  
-.w_1{ position:absolute;left:0; top:0;min-width:375px;  width:100%; height:1136px; z-index:10}
-.top{ position:absolute;width:calc(100% - 60px); height:66px; margin-top:32px; margin-left:30px; border:1px }
-.day{ width:146px; height:145px; }
-.day img{ width:100%;}
-.time{ margin-top:37px;}
-.time img {
-	width:100%
-}
-.weather{ width:167px; height:71px; margin-top:54px; }
-.btn{  height:14px; margin-top:65px; }
-
-.middleBox {
-	position:absolute;
-	bottom:50px;
-	width:100%;
-	margin:0 30px; 
-	width:calc(100% - 60px);
-	z-index:10;
-}
 </style>
 </head>
 <body>
 
 
 <!--  w_1 -->
-<div class="wrap_1">
-	<div class="top">
-    	<div style="float:left; height:66px;"><img src="{% static 'img/wedding-images/w_1/img_1.png' %}" /></div>
-        <div style=" float:right;margin-left:10px; height:66px;"><img src="{% static 'img/wedding-images/w_1/img_3.png' %}" /></div>
-        <div style=" float:right; height:66px;"><img src="{% static 'img/wedding-images/w_1/img_2.png' %}" /></div>
+<div id="wrap_1">
+<div id="w_1">
+	<div id="top">
+    	<div style="float:left;"><img src="{% static 'img/wedding-images/w_1/img_1.png' %}" /></div>
+        <div style=" margin-left:271px; float:left;"><img src="{% static 'img/wedding-images/w_1/img_2.png' %}" /></div>
+        <div style=" margin-left:16px; float:left;"><img src="{% static 'img/wedding-images/w_1/img_3.png' %}" /></div>
    </div>
-   <div class="middleBox">
-	   <div class="day">
-            <img src="{% static 'img/wedding-images/w_1/img_4.png' %}" style="position: relative;"/>
-            <center><div id="dateView" style="position: relative;  top: -90px;"></div></center>
-       </div> 
+  <div id="day">
+    <img src="{% static 'img/wedding-images/w_1/img_4.png' %}"  style="position: absolute;"/>
+    <center><div id="dateView" style="position: relative; padding-top: 55px;"></div></center>
 
-	   <div class="time"><img src="{% static 'img/wedding-images/w_1/img_5.png' %}" /></div>  
-	   <div class="weather"><img src="{% static 'img/wedding-images/w_1/img_6.png' %}" /></div>  
-	   <div class="btn">
-			<a href=""><img src="{% static 'img/wedding-images/w_1/over.png' %}" /></a>
-			<a href=""><img src="{% static 'img/wedding-images/w_1/out.png' %}" /></a>
-			<a href=""><img src="{% static 'img/wedding-images/w_1/out.png' %}" /></a>
-			<a href=""><img src="{% static 'img/wedding-images/w_1/out.png' %}" /></a>
-			<a href=""><img src="{% static 'img/wedding-images/w_1/out.png' %}" /></a>
-	   </div>
-
+  </div> 
+   <div id="time"><img src="{% static 'img/wedding-images/w_1/img_5.png' %}" /></div>  
+   <div id="weather"><img src="{% static 'img/wedding-images/w_1/img_6.png' %}" /></div>  
+   <div id="btn">
+   		<div style="float:left;"><img src="{% static 'img/wedding-images/w_1/over.png' %}" /></div>
+        <div style="float:left; margin-left:11px;"><img src="{% static 'img/wedding-images/w_1/out.png' %}" /></div>
+        <div style="float:left; margin-left:11px;"><img src="{% static 'img/wedding-images/w_1/out.png' %}" /></div>
+        <div style="float:left; margin-left:11px;"><img src="{% static 'img/wedding-images/w_1/out.png' %}" /></div>
+        <div style="float:left; margin-left:11px;"><img src="{% static 'img/wedding-images/w_1/out.png' %}" /></div>
    </div>
- <div class="bg"><img src="{% static 'img/wedding-images/w_1/bg.jpg' %}"></div>
- <div style="clear:both"></div>
+</div>
 </div>  
 
 <script src="{% static 'js/jquery.js' %}"></script>
@@ -112,7 +86,7 @@ body {
          
     });
        
-</script>   
+  </script>
    
    
    

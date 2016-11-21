@@ -66,7 +66,7 @@ textarea.tx { border:1px solid #9A9A9A; border-right:1px solid #D8D8D8; border-b
 #photo{ width:580px; height:466px; margin-left:30px;}
 #thum{ width:580px; height:130px; margin-top:20px; margin-left:30px;}
 #pic32{ width:600px; height:252px; margin-left:20px; margin-top:38px;}
-#mouseover{cursor: pointer;}
+/*#thum_img{cursor:pointer; float:left;}*/
 
 
 /* w_4 */
@@ -98,5 +98,5 @@ textarea.tx { border:1px solid #9A9A9A; border-right:1px solid #D8D8D8; border-b
 #wrap_6{ width:100%; min-width:640px; height:1137px; position:absolute; }
 #w_6{ width:640px; height:1137px; margin:0 auto;}
 #top6{ width:580px; height:917px; margin-left:30px;}
-#sns{ width:600px; height:84px; margin-left:106px; margin-top:47px; }
+#sns{ width:600px; height:84px; margin-left:0px; margin-top:47px; }
 #footer{ width:640px; height:61px; margin-top:28px;}
