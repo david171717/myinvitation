@@ -32,10 +32,10 @@ body {
 }
 .call2Sub div{
 	width:90px;
-	display:inline-block; 
+	display:inline-block;
 	text-align:center;
 	font-size:1.5em;
-	color:#666;
+	color:#666;z
 }
 .name2{ margin-left:78px; height:18px; margin-top:9px;}
 .con2{ position:relative;}
@@ -57,43 +57,85 @@ body {
 <div class="wrap_2">
 <div class="w_2">
 	<div class="top2"><img src="{% static 'img/wedding-images/w_2/img_1.jpg' %}" /></div>
-    <div class="pic"><img src="{% static 'img/wedding-images/w_2/img_2.jpg' %}" /></div>
+    <div class="pic"><img src="{% static 'img/wedding-images/w_2/aboutus_main.png' %}" /></div>
 	<div class="title2">
     	<div><img src="{% static 'img/wedding-images/w_2/img_3.jpg' %}" /></div><div><img src="{% static 'img/wedding-images/w_2/img_4.jpg' %}" /></div>
     </div>
     <div class="call2">
 		<div class="call2Sub">
 			<div>
-				<img src="{% static 'img/wedding-images/w_2/call_over_2.jpg' %}" /><br>
-				강명국
+                <a href = "tel:010-8006-4324">
+				    <img src="{% static 'img/wedding-images/w_2/call_over_2.jpg' %}" /><br>
+				    김명국
+                </a>
 			</div>
 			<div>
-				<img src="{% static 'img/wedding-images/w_2/call_out_1.jpg' %}" /><br>
-				<img src="{% static 'img/wedding-images/w_2/name.jpg' %}" />
+                <a href = "tel:010-2493-9635">
+				    <img src="{% static 'img/wedding-images/w_2/call_out_1.jpg' %}" /><br>
+				    김명순
+                </a>
 			</div>
 		</div><div class="call2Sub">
 			<div>
-				<img src="{% static 'img/wedding-images/w_2/call_out_2.jpg' %}" /><br>
-				<img src="{% static 'img/wedding-images/w_2/name.jpg' %}" />
+                <a href = "tel:010-4852-2050">
+				    <img src="{% static 'img/wedding-images/w_2/call_out_03.jpg' %}" /> <br>
+				    박영규
+                </a>
 			</div>
 			<div>
-				<img src="{% static 'img/wedding-images/w_2/call_out_1.jpg' %}" /><br>
-				<img src="{% static 'img/wedding-images/w_2/name.jpg' %}" />
+                <a href = "tel:010-3372-6512">
+				    <img src="{% static 'img/wedding-images/w_2/call_out_04.jpg' %}" /><br>
+				    강필선
+                </a>
 			</div>
 		</div>
     </div>
 
     <div class="con2">
     	<div class="icon">
-    		<div style="margin-left:18px;"><img src="{% static 'img/wedding-images/w_2/icon_mail.jpg' %}" /></div>
-        	<div style=" margin-top:30px;"><img src="{% static 'img/wedding-images/w_2/icon_call.jpg' %}" /></div>
-        	<div style="margin-left:7px; margin-top:29px;"><img src="{% static 'img/wedding-images/w_2/icon_talk.jpg' %}" /></div>
+    		<div style="margin-left:18px;">
+                <a href="mailto:alphalotus@me.com">
+                    <img src="{% static 'img/wedding-images/w_2/icon_mail.jpg' %}" />
+                </a>
+            </div>
+
+        	<div style=" margin-top:30px;">
+                <a href = "tel:010-2688-4973">
+                    <img src="{% static 'img/wedding-images/w_2/icon_call.jpg' %}" />
+                </a>
+            </div>
+
+        	<div style="margin-left:7px; margin-top:29px;">
+                <a href="sms:010-2688-4973">
+                    <img src="{% static 'img/wedding-images/w_2/icon_talk.jpg' %}" />
+                </a>
+            </div>
     	</div>
+
+
+
         <div class="hi2"><img src="{% static 'img/wedding-images/w_2/img_5.jpg' %}" /></div>
+        
+
+
         <div class="icon2">
-    		<div><img src="{% static 'img/wedding-images/w_2/icon_mail.jpg' %}" /></div>
-        	<div style=" margin-left:16px; margin-top:30px;"><img src="{% static 'img/wedding-images/w_2/icon_call2.jpg' %}" /></div>
-        	<div style="margin-left:8px; margin-top:32px;"><img src="{% static 'img/wedding-images/w_2/icon_talk2.jpg' %}" /></div>
+    		<div>
+                <a href="mailto:sjining@daum.net">
+                    <img src="{% static 'img/wedding-images/w_2/icon_mail.jpg' %}" />
+                </a>
+            </div>
+
+        	<div style=" margin-left:16px; margin-top:30px;">
+                <a href = "tel:010-9270-0916">
+                    <img src="{% static 'img/wedding-images/w_2/icon_call2.jpg' %}" />
+                </a>
+            </div>
+
+        	<div style="margin-left:8px; margin-top:32px;">
+                <a href="sms:010-9270-0916">
+                    <img src="{% static 'img/wedding-images/w_2/icon_talk2.jpg' %}" />
+                </a>
+            </div>
     	</div>
     </div>
 </div>
