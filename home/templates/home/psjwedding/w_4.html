@@ -23,7 +23,15 @@ body {
 .friend{display:inline-block; margin-top:30px;	}
 .field_1{margin-top:30px; width:586px; height:50px; }
 .field_2{ width:600px; margin-top:15px;  }
-#video{ width:100%; height:400px; margin-left: 2%; margin-top: 60px;}
+#video{
+    width:100%; height:400px; margin-left: 2%; margin-top: 60px;
+}
+
+.embed-container { margin-top:70px;position:relative; padding-bottom:56.25%; height:0; overflow:hidden; }
+.embed-container iframe,
+.embed-container object,
+.embed-container embed { position:absolute; top:0; left:0; width:100%; height:100%;
+
 .congratulation{}
 .save{ float:right; margin-top:20px;}
 </style>
@@ -35,10 +43,10 @@ body {
 <!--  w_4 -->
 <div class="wrap_4">
 <div class="w_4">
-    <center><div id="pic4">
+    <div class="embed-container">
         <!-- <img src="{% static 'img/wedding-images/w_3/img_4.jpg' %}" /> -->
-        <iframe id="video" height="400" src="https://www.youtube.com/embed/bt2fIe3wLhA" frameborder="0" allowfullscreen></iframe>
-    </div></center>
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/bt2fIe3wLhA" frameborder="0" allowfullscreen></iframe>
+    </div>
 	<!-- <div class="top4"><img src="{% static 'img/wedding-images/w_4/img_1.jpg' %}" /></div>
     <div class="title">
     	<div style="float:left;"><img src="{% static 'img/wedding-images/w_4/img_2.jpg' %}" /></div>
