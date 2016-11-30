@@ -38,13 +38,13 @@ textarea.tx { border:1px solid #9A9A9A; border-right:1px solid #D8D8D8; border-b
 
 
 /* w_1 */
-#wrap_1{ width:100%; min-width:640px; height:1136px; position:absolute; background-image:url(../img/wedding-images/w_1/bg.jpg); background-position:top center; background-repeat:no-repeat;}
-#w_1{ width:640px; height:1136px; margin:0 auto;}
+/*#wrap_1{ width:100%; min-width:640px; height:1136px; position:absolute; background-image:url(../img/wedding-images/w_1/bg.jpg); background-position:top center; background-repeat:no-repeat;}*/
+/*#w_1{ width:640px; height:1136px; margin:0 auto;}
 #top{ width:580px; height:66px; margin-top:32px; margin-left:30px;}
 #day{ width:146px; height:145px; margin-top:457px; margin-left:30px;}
 #time{ width:498px; height:146px; margin-top:37px; margin-left:30px;}
 #weather{ width:167px; height:71px; margin-top:54px; margin-left:30px;}
-#btn{ width:116px; height:14px; margin-top:65px; margin-left:30px;}
+#btn{ width:116px; height:14px; margin-top:65px; margin-left:30px;}*/
 
 /* w_2 */
 #wrap_2{ width:100%; min-width:640px; height:1136px; position:absolute; background-image:url(../img/wedding-images/w_2/bg.jpg); background-position:top center; background-repeat:no-repeat;}

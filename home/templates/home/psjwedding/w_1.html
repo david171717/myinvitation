@@ -16,6 +16,7 @@ body {
 	margin-bottom: 0px;
 }
 #photo {width:636px;margin-left: -3px;}
+#main-img {width:636px;}
 .wrap_1{ width:636px; min-height:100%; position:relative;}
 
 .wrap_1 .bg { height: 1100px;margin-top: 0px;
@@ -88,16 +89,16 @@ body {
       <!-- Wrapper for slides -->
       <div class="carousel-inner bg" role="listbox">
         <div label=0 id="photo" class="item active">
-          <img src="{% static 'img/wedding-images/w_1/main_01.jpg' %}">
+          <img id=main-img src="{% static 'img/wedding-images/w_1/main_01.jpg' %}">
         </div>
         <div label=1 id="photo" class="item">
-          <img src="{% static 'img/wedding-images/w_1/main_02.jpg' %}">
+          <img id=main-img rc="{% static 'img/wedding-images/w_1/main_02.jpg' %}">
         </div>
         <div label=2 id="photo" class="item">
-          <img src="{% static 'img/wedding-images/w_1/main_03.jpg' %}">
+          <img id=main-img src="{% static 'img/wedding-images/w_1/main_03.jpg' %}">
         </div>
         <div label=3 id="photo" class="item">
-          <img src="{% static 'img/wedding-images/w_1/main_04.jpg' %}">
+          <img id=main-img src="{% static 'img/wedding-images/w_1/main_04.jpg' %}">
         </div>
       </div>
 
