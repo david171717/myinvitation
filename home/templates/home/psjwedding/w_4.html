@@ -16,14 +16,14 @@ body {
 	margin-bottom: 0px;
 }
 .wrap_4{ position:relative; min-height:100%; }
-.w_4{   position:absolute;left:0;top:0; margin:0 30px; width:calc(100% - 60px); height:1136px; }
+.w_4{   position:absolute;left:0;top:0; width:calc(100% - 60px); height:1136px; }
 .top4{ margin-top:67px;}
 .top4 img{ width:100%;}
 .title{ margin-top:40px;}
 .friend{display:inline-block; margin-top:30px;	}
 .field_1{margin-top:30px; width:586px; height:50px; }
 .field_2{ width:600px; margin-top:15px;  }
-
+#video{ width:100%; height:400px; margin-left:5%;}
 .congratulation{}
 .save{ float:right; margin-top:20px;}
 </style>
@@ -35,6 +35,10 @@ body {
 <!--  w_4 -->
 <div class="wrap_4">
 <div class="w_4">
+    <center><div id="pic4">
+        <!-- <img src="{% static 'img/wedding-images/w_3/img_4.jpg' %}" /> -->
+        <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/bt2fIe3wLhA" frameborder="0" allowfullscreen></iframe>
+    </div></center>
 	<!-- <div class="top4"><img src="{% static 'img/wedding-images/w_4/img_1.jpg' %}" /></div>
     <div class="title">
     	<div style="float:left;"><img src="{% static 'img/wedding-images/w_4/img_2.jpg' %}" /></div>

@@ -9,6 +9,7 @@
 <title>w1</title>
 <link rel="stylesheet" href="{% static 'css/wedding-style.css' %}">
 <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <style type="text/css">
 body {
 	margin-left: 0px;
@@ -35,9 +36,12 @@ body {
 	<div class="sns">
     	<div style="float:left; "><img onclick="facebook_share()" style="cursor: pointer;" src="{% static 'img/wedding-images/w_6/sns_1.jpg' %}" /></div>
         <div style="float:left; margin-left:10px"><img onclick="twitter_share()" style="cursor: pointer;" src="{% static 'img/wedding-images/w_6/sns_2.jpg' %}" /></div>
-        <div style="float:left; margin-left:10px"><img src="{% static 'img/wedding-images/w_6/sns_3.jpg' %}" /></div>
+        <div style="float:left; margin-left:10px"><img onclick="kakao_share()" style="cursor: pointer;" src="{% static 'img/wedding-images/w_6/sns_3.jpg' %}" /></div>
+        <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
         <!-- <div style="float:left;"><img src="{% static 'img/wedding-images/w_6/sns_4.jpg' %}" /></div> -->
         <div style="float:left; margin-left:10px""><img src="{% static 'img/wedding-images/w_6/sns_5.jpg' %}" /></div>
+<!--         <a id="kakao-login-btn">login?</a>
+        <a href="http://alpha-developers.kakao.com/logout">logout?</a> -->
         
     </div>
     <div class="footer" style="margin-top:200px; position:relative;"><img src="{% static 'img/wedding-images/w_6/footer.jpg' %}" /></div>
@@ -54,8 +58,30 @@ function facebook_share(){
 
 var twitter_text = '[김주원][박서진] 결혼합니다.'
 var twitter_url = 'http://52.78.189.154/psjwedding/'
+
 function twitter_share(){
     window.open('https://twitter.com/intent/tweet?url=http://52.78.189.154/psjwedding/');
+}
+
+function kakao_share(){
+  //<![CDATA[
+    // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('ee75000c3a04b9eb793852a2b9012b84');
+    // // 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+    Kakao.Link.createTalkLinkButton({
+      container: '#kakao-link-btn',
+      label: '카카오링크 샘플에 오신 것을 환영합니다.',
+      image: {
+        src: 'http://dn.api1.kage.kakao.co.kr/14/dn/btqaWmFftyx/tBbQPH764Maw2R6IBhXd6K/o.jpg',
+        width: '300',
+        height: '200'
+      },
+      webButton: {
+        text: '김주원♥박서진 결혼합니다',
+        url: 'http://localhost:8000/psjwedding' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+      }
+    });
+  //]]>
 }
 </script>   
    
