@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'myinvitation.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'myinvitation',
+        'NAME': 'myinvitation_sj',
         'ENGINE': 'mysql.connector.django',
         'USER': 'root',
         'PASSWORD': 'master12#',
