@@ -42,6 +42,8 @@ class myUserManager(BaseUserManager):
 		return user
 
 
+
+# ############### Before #################################### 
 class myUser(AbstractBaseUser, PermissionsMixin):
 	email = models.EmailField(max_length=30, unique=True)
 	phone = models.CharField(max_length=15,null=False)
@@ -66,6 +68,8 @@ class myUser(AbstractBaseUser, PermissionsMixin):
 	
 	def __str__(self):
 		return self.email
+
+# ############### Before #################################### 
 
 # 	def has_perm(self, perm, obj=None):
 # 		"Does the user have a specific permission?"

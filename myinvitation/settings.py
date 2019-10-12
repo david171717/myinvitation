@@ -31,13 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'home',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,8 @@ ROOT_URLCONF = 'myinvitation.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,10 +77,12 @@ WSGI_APPLICATION = 'myinvitation.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'myinvitation_sj',
-        'ENGINE': 'mysql.connector.django',
-        'USER': 'root',
-        'PASSWORD': 'master12#',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myinvitation',
+        'USER': 'dbmaster',
+        'PASSWORD': 'dbmaster12#',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
         'OPTIONS': {
           'autocommit': True,
         },
@@ -88,6 +91,7 @@ DATABASES = {
 AUTH_USER_MODEL = 'home.myUser'
 
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL='/login/'
 LOGOUT_URL='/logout/'
 

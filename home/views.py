@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from .forms import SignupForm, LoginForm
 # from .forms import SignupForm, LoginForm, ProfileForm
 from .models import myUser
@@ -39,7 +39,6 @@ def signup(request):
 
 def signup_ok(request):
 	return render(request, 'home/signup_ok.html', {})
-
 
 # def loginview(request):
 # 	email = password = ''
